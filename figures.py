@@ -21,8 +21,8 @@ class Figure:
         turtle.done()
         
 class Dynamic_figure(Figure):
-    def __init__(self, color="black", width=1, angle=60, size=100, diff=1):
-        super().__init__(color="black", width=1, angle=60, size=100)
+    def __init__(self, color, width, angle, size, diff=1):
+        super().__init__(color, width, angle, size)
         self.diff = diff
 
     def render(self, itters, is_right=True):
@@ -38,8 +38,8 @@ class Dynamic_figure(Figure):
 
 
 class Colorful_figure(Figure):
-    def __init__(self, color="black", width=1, angle=60, size=100, colors=None):
-        super().__init__(color="black", width=1, angle=60, size=100)
+    def __init__(self, color, width, angle, size, colors=None):
+        super().__init__(color, width, angle, size)
         self.colors = colors if colors else []
 
     def render(self, itters, is_right=True):
