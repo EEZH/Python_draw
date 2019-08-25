@@ -55,16 +55,20 @@ class Colorful_figure(Figure):
         turtle.done()
 
 class DynCol_Figure(Dynamic_figure,Colorful_figure):
-    def __init__(self, color, width, angle, size, colors, diff):
+    def __init__(self, color, width, angle, size, colors, diff, speed=3):
         Dynamic_figure.__init__(self, color, width, angle, size, diff)
         Colorful_figure.__init__(self, color, width, angle, size, colors)
+        self.speed = speed
 
     def render(self, itters, is_right=True):
         itters = range(itters)
         colors_count = len(self.colors)
         turn = self.pen.right if is_right else self.pen.left
+        
+
         for i in itters:
             cur_color = self.colors[i % colors_count]
+            self.pen.speed(self.speed)
             self.pen.color(cur_color)
             self.size -= self.diff
             self.pen.forward(self.size)
