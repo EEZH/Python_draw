@@ -1,7 +1,7 @@
 import turtle
-from figures import Figure, Dynamic_figure, Colorful_figure
+from figures import Figure, Dynamic_figure, Colorful_figure, DynCol_Figure
 
-figure = Colorful_figure(color="green",width=3,angle=85,size=100,colors=["red", "green", "yellow", "purple", "blue"])
+figure = DynCol_Figure(color="green",width=2,angle=75,size=100,diff=5,colors=["red", "green", "yellow", "purple", "blue","pink", "black"])
 figure.render(50)
 #["red", "green", "yellow", "purple", "blue"]
 #ДЗ - разработать:
