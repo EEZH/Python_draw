@@ -58,7 +58,6 @@ class DynCol_Figure(Dynamic_figure,Colorful_figure):
     def __init__(self, color, width, angle, size, colors, diff, speed=3):
         Dynamic_figure.__init__(self, color, width, angle, size, diff)
         Colorful_figure.__init__(self, color, width, angle, size, colors)
-        # speed - int(input())
         self.speed = speed
 
     def render(self, itters, is_right=True):

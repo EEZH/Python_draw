@@ -8,7 +8,7 @@ while cur_speed not in range(0, 11):
     print("Значение скорости черепашки должно быть от 0 до 10 (включительно)!!!")
     cur_speed = int(input("Введите скорость черепахи от 0 до 10: "))
 else:
-    figure = DynCol_Figure(color="green",width=2,angle=55,size=100,diff=5,
+    figure = DynCol_Figure(color="green",width=2,angle=40,size=100,diff=5,
                         colors=list_of_colors,speed=cur_speed)
     figure.render(50)
 
