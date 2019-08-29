@@ -58,8 +58,21 @@ class DynCol_Figure(Dynamic_figure,Colorful_figure):
     def __init__(self, color, width, angle, size, colors, diff, speed=3):
         Dynamic_figure.__init__(self, color, width, angle, size, diff)
         Colorful_figure.__init__(self, color, width, angle, size, colors)
-        self.speed = speed
-
+        
+        while True:
+            try:
+                speed = int(input("Введите скорость черепахи от 0 до 10: "))
+                if speed  in range(0, 11):
+                    self.speed = speed
+                    break
+                else:
+                    print("Значение скорости черепашки должно быть от 0 до 10 (включительно)!!!")
+                           
+            except ValueError:
+                print("Значение скорости черепашки должно быть от 0 до 10 (включительно)!!!")       
+        
+                           
+            
     def render(self, itters, is_right=True):
         itters = range(itters)
         colors_count = len(self.colors)
