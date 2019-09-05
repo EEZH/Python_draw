@@ -102,3 +102,78 @@ class Device:
 # 1. создать класс Энимад с полями. Унаследовать кошечек, собачек и птичек
 # 2. Создать класс СТартовая площадка. Создаем классы транспорта и запускаем виды транспорта с разной реализацией. 
 # 3. создать транспорт от именнованного кортежа.
+
+
+class Animal:
+    def __init__(self, legs, length_of_tale, wings=True,fur=False):
+        self.legs = legs
+        self.length_of_tale = length_of_tale
+        self.wings = wings
+        self.fur = fur
+
+    def move(self):
+        print("now is moving" )
+
+    def fly(self):
+        if self.wings == True:
+            print("Flying")
+        else:
+            print("Рожденный ползать летать не может!")
+
+class Bird(Animal):
+    def __init__(self, legs, length_of_tail, wings=True,fur=False):
+        super().__init__(legs, length_of_tail, wings, fur)
+
+    def chik_chik(self):
+        print("chik-chirik")
+
+class Dog(Animal):
+    def __init__(self, legs, length_of_tail, wings=False,fur=True):
+        super().__init__(legs, length_of_tail, wings, fur)
+
+    def wow(self):
+        print("wow-wow! RRRRRR")
+
+class Cat(Animal):
+    def __init__(self, legs, length_of_tail, wings=False,fur=True):
+        super().__init__(legs, length_of_tail, wings, fur)
+
+    def myau(self):
+        print("myau")
+
+
+
+
+
+class Launcher:
+    def __init__(self, item):
+        self.item = item
+
+    def launch(self):
+        self.item.launch()
+
+    def landing(self):
+        self.item.landing()
+
+class Rocket:
+    def launch(self):
+        print("Rocket is launching")
+
+    def landing(self):
+        print("Rocket is landing")
+
+class Airbus:
+    def launch(self):
+        print("Airbus is launching")
+    def landing(self):
+        print("Airbus is landing")
+
+class Helicopter:
+    def launch(self):
+        print("Helicopter is launching")
+    def landing(self):
+        print("Helicopter is landing")
+    
+
+
+
